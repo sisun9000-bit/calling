@@ -1144,7 +1144,7 @@ body{overflow-x:hidden;-webkit-text-size-adjust:100%}
 .special-history .history-detail{font-size:13px;line-height:1.7;white-space:pre-wrap;margin-top:5px;color:#344c68!important;-webkit-text-fill-color:#344c68!important}
 .special-history .history-empty{text-align:center;font-size:13px;color:#596d82!important;-webkit-text-fill-color:#596d82!important;padding:20px 6px}
 </style></head><body>
-<div class="authcover" id="authcover"><div class="authcard"><button id="loginAdminLock" class="login-admin-lock" type="button" aria-label="관리자 접속" title="관리자 접속">♙</button><h2>TOYU RYOKAN<br>HOTEL WORK CLOUD</h2><p>본인 이름/직급으로 들어와 업무를 시작해 주세요.</p><label>직원 / 직위</label><select id="loginWho"><option value="">선택해 주세요</option><option>대표님</option><option>전무님</option><option>지배인님</option><option>매니저님(선영)</option><option>웅주임님(일웅)</option><option>은진</option><option>파트타이머1</option><option>파트타이머2</option><option>파트타이머3</option><option>기타 임원</option></select><div id="ptname" hidden><label>파트타이머 이름</label><input id="loginName" maxlength="30" placeholder="실제 이름을 적어 주세요"></div><div id="emailFirstSetup" hidden><label for="firebaseEmail">처음 한 번만 · 직원 로그인 이메일</label><input id="firebaseEmail" type="email" autocomplete="username" placeholder="기존 업무 사이트에 등록된 이메일"><p style="margin:5px 0 0;color:#65758d;font-size:12px">이 휴대폰에 직원 이름과 이메일만 연결합니다. 비밀번호는 저장하지 않습니다.</p></div><label for="loginPin">본인 비밀번호</label><input id="loginPin" type="password" autocomplete="current-password" placeholder="직원 비밀번호 입력"><button class="primarybtn" id="loginBtn">업무 시작하기</button><p id="loginNote">직원 이름을 선택하고 비밀번호를 입력해 주세요.</p><button type="button" id="changeFirebaseEmail" style="width:auto;margin:4px 0 0;padding:5px 0;background:transparent;border:0;color:#587ba1;font-size:12px;text-decoration:underline">직원 계정 이메일 다시 연결하기</button><p class="subnote">Firebase로 안전하게 인증하며, 업무 기록은 클라우드에 공유됩니다.</p></div></div>
+<div class="authcover" id="authcover"><div class="authcard"><button id="loginAdminLock" class="login-admin-lock" type="button" aria-label="관리자 접속" title="관리자 접속">♙</button><h2>TOYU RYOKAN<br>HOTEL WORK CLOUD</h2><p>본인 이름/직급으로 들어와 업무를 시작해 주세요.</p><label>직원 / 직위</label><select id="loginWho"><option value="">선택해 주세요</option><option>대표님</option><option>전무님</option><option>지배인님</option><option>매니저님(선영)</option><option>웅주임님(일웅)</option><option>은진</option><option>파트타이머1</option><option>파트타이머2</option><option>파트타이머3</option><option>기타 임원</option></select><div id="ptname" hidden><label>파트타이머 이름</label><input id="loginName" maxlength="30" placeholder="실제 이름을 적어 주세요"></div><div id="emailFirstSetup" hidden><label for="firebaseEmail">처음 한 번만 · 직원 로그인 이메일</label><input id="firebaseEmail" type="email" autocomplete="username" placeholder="기존 업무 사이트에 등록된 이메일"><p style="margin:5px 0 0;color:#65758d;font-size:12px">이 휴대폰에 직원 이름과 이메일만 연결합니다. 비밀번호는 저장하지 않습니다.</p></div><details id="passwordSetup" style="margin:12px 0;padding:12px;border:1px solid #c9d8ee;border-radius:10px;text-align:left"><summary style="cursor:pointer;font-weight:700;color:#245a84">비밀번호를 모르시나요? 처음 설정 · 재설정</summary><p style="font-size:13px;line-height:1.6">본인 이메일로 설정 링크를 받아 새 비밀번호를 정하세요. 같은 계정을 사용하는 기존 업무 사이트에도 새 비밀번호가 적용됩니다.</p><button id="sendPasswordSetup" type="button" style="width:100%;padding:12px;white-space:normal">내 이메일로 비밀번호 설정 링크 받기</button><p id="passwordSetupStatus" role="status" style="font-size:13px;line-height:1.6"></p></details><label for="loginPin">본인 비밀번호</label><input id="loginPin" type="password" autocomplete="current-password" placeholder="직원 비밀번호 입력"><button class="primarybtn" id="loginBtn">업무 시작하기</button><p id="loginNote">직원 이름을 선택하고 비밀번호를 입력해 주세요.</p><button type="button" id="changeFirebaseEmail" style="width:auto;margin:4px 0 0;padding:5px 0;background:transparent;border:0;color:#587ba1;font-size:12px;text-decoration:underline">직원 계정 이메일 다시 연결하기</button><p class="subnote">Firebase로 안전하게 인증하며, 업무 기록은 클라우드에 공유됩니다.</p></div></div>
 <div class="wrap"><div id="firebaseLoginState" style="padding:8px 12px;color:#245a84;font-size:12px;text-align:right">Firebase 연결 확인 중…</div><header class="mast"><div class="brand"><span class="logo">✳</span><span>TOYU RYOKAN <b>HOTEL WORK CLOUD</b></span></div><span class="mini" id="todayLabel"></span></header>
 <section class="date-hero" aria-label="선택한 업무 날짜"><div class="date-hero-inner"><div class="hero-top"><span class="date-kicker">TOYU RYOKAN HOTEL FRONT</span><span class="hero-eyebrow">토유 프론트 일일업무기록</span></div><div class="hero-main"><div><h1 class="hero-greeting">안녕하세요, <span id="heroGreetingName">직원</span><span id="heroHonorific">님</span>!</h1><p class="hero-date-line">오늘은 <strong id="heroDate">오늘 날짜</strong>입니다</p></div><div class="hero-shift" id="heroShiftSummary">오늘의 근무 시간</div></div></div></section>
 <section id="specialTodoPanel" class="special-panel" aria-label="오늘의 특별 To Do">
@@ -2343,7 +2343,7 @@ document.addEventListener('click',event=>{
 </script>
 <script type="module" id="toyu-firebase-auth-test">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js';
-import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged,getIdTokenResult} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
+import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged,getIdTokenResult,sendPasswordResetEmail} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
 import {getFirestore,doc,getDoc,collection,onSnapshot,runTransaction,serverTimestamp,setDoc,deleteDoc} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
 const config={apiKey:'AIzaSyBsksVrgM5tCaw3FCUxOZZkAmjOt6Nz5sA',authDomain:'front-ac40a.firebaseapp.com',projectId:'front-ac40a',storageBucket:'front-ac40a.firebasestorage.app',messagingSenderId:'986990525854',appId:'1:986990525854:web:c834f35d490042958bea8f'};
 const app=initializeApp(config),auth=getAuth(app),db=getFirestore(app);
@@ -2399,6 +2399,7 @@ async function persist(day,kind,id,value){
  }finally{pending.delete(k)}
 }
 window.TOYU_FB={
+ resetPassword:email=>sendPasswordResetEmail(auth,email),
  // UI gate only: Firestore Security Rules must separately enforce admin writes.
  isAdmin:()=>signedIn && !!auth.currentUser && adminUid===auth.currentUser.uid,
  async checkAdmin(){
@@ -2587,7 +2588,42 @@ onAuthStateChanged(auth,user=>{if(!user){adminUid=null;signedIn=false;clearListe
  setInterval(connect,1200);renderSpecial();connect();
 })();
 </script>
-<style id="compact-work-cards">
+<script>(() => {
+ const role=document.querySelector('#loginWho');
+ const email=document.querySelector('#firebaseEmail');
+ const setup=document.querySelector('#emailFirstSetup');
+ const panel=document.querySelector('#passwordSetup');
+ const send=document.querySelector('#sendPasswordSetup');
+ const message=document.querySelector('#passwordSetupStatus');
+ let sending=false;
+ panel.addEventListener('toggle',()=>{
+  if(panel.open){setup.hidden=false;email.focus();}
+ });
+ role.addEventListener('change',()=>{if(panel.open)setup.hidden=false;});
+ send.addEventListener('click',async()=>{
+  if(sending)return;
+  if(!role.value){message.textContent='먼저 본인 이름을 선택해 주세요.';role.focus();return;}
+  const address=email.value.trim();
+  if(!address||!email.checkValidity()){
+   setup.hidden=false;message.textContent='본인이 사용하는 직원 계정 이메일을 입력해 주세요.';email.focus();return;
+  }
+  if(!window.TOYU_FB?.resetPassword){message.textContent='로그인 서버에 연결 중입니다. 잠시 후 다시 눌러 주세요.';return;}
+  sending=true;send.disabled=true;send.textContent='설정 메일 요청 중…';message.textContent='';
+  try{
+   await window.TOYU_FB.resetPassword(address);
+   message.textContent='등록된 계정이면 비밀번호 설정 메일이 발송됩니다. 받은편지함과 스팸함을 확인해 주세요. 메일 링크에서 새 비밀번호를 정한 뒤 이 화면으로 돌아와 로그인하세요. 메일이 오지 않으면 기존 시스템 관리자에게 직원 계정 등록 여부를 확인해 주세요.';
+  }catch(error){
+   const messages={
+    'auth/invalid-email':'이메일 주소를 확인해 주세요.',
+    'auth/user-not-found':'등록된 직원 계정이 없습니다. 기존 시스템 관리자에게 계정 등록을 요청해 주세요.',
+    'auth/too-many-requests':'요청이 많습니다. 잠시 뒤 다시 시도해 주세요.',
+    'auth/network-request-failed':'인터넷 연결을 확인한 뒤 다시 눌러 주세요.'
+   };
+   message.textContent=messages[error?.code]||'설정 메일을 요청하지 못했습니다. 기존 시스템 관리자에게 계정 설정을 확인해 주세요.';
+  }finally{sending=false;send.disabled=false;send.textContent='내 이메일로 비밀번호 설정 링크 받기';}
+ });
+})();
+</script><style id="compact-work-cards">
 /* Layout-only overrides. Existing colors, task data, auth and saving are retained. */
 #main .cards,#previous .cards{display:grid!important;grid-template-columns:1fr!important;gap:4px!important}
 #main .section,#previous .section{margin:10px 0!important;padding:0!important}
