@@ -1836,12 +1836,13 @@ function readReviewsV13(){try{return JSON.parse(localStorage.getItem(reviewKeyV1
 function drawReviewsV13(){const holder=$('#dailyReviewEntries');if(!holder)return;
  holder.innerHTML=readReviewsV13().slice().reverse().map(e=>`<div class="daily-review-entry"><div class="entry-meta">${esc(e.who)} · ${esc(e.at)}</div><div class="entry-content">${esc(e.text)}</div></div>`).join('')||'<p>오늘 등록된 업무 후기가 없습니다.</p>';
 }
-$('#dailyReviewSave').onclick=()=>{if(!identity)return alert('로그인 후 작성해 주세요.');const val=$('#dailyReviewText').value.trim();if(!val)return alert('한 줄 후기를 적어 주세요.');const items=readReviewsV13();items.push({who:identity,at:localStamp(),text:val});localStorage.setItem(reviewKeyV13(),JSON.stringify(items));$('#dailyReviewText').value='';drawReviewsV13();};
+if($('#dailyReviewSave'))$('#dailyReviewSave').onclick=()=>{if(!identity)return alert('로그인 후 작성해 주세요.');const val=$('#dailyReviewText').value.trim();if(!val)return alert('한 줄 후기를 적어 주세요.');const items=readReviewsV13();items.push({who:identity,at:localStamp(),text:val});localStorage.setItem(reviewKeyV13(),JSON.stringify(items));$('#dailyReviewText').value='';drawReviewsV13();};
 const renderBeforeV13=render;
 render=function(){renderBeforeV13();drawReviewsV13();};
 // Time controls: native picker, keyboard entry and accessible numeric selection/dial.
 (function(){
  const native=$('#sheetTime'),input=$('#timeTyped'),hh=$('#timeHourSelect'),mm=$('#timeMinuteSelect'),dial=$('#timeDial'),numbers=$('#timeDialNums');
+ if(![native,input,hh,mm,dial,numbers].every(Boolean))return;
  hh.innerHTML=Array.from({length:24},(_,i)=>`<option value="${String(i).padStart(2,'0')}">${String(i).padStart(2,'0')}시</option>`).join('');
  mm.innerHTML=Array.from({length:60},(_,i)=>`<option value="${String(i).padStart(2,'0')}">${String(i).padStart(2,'0')}분</option>`).join('');
  let mode='dial',stage='hours';
